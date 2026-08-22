@@ -1,0 +1,43 @@
+@use 'src/styles/variables.scss' as *;
+
+.logo_block_wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 75px;
+}
+
+.logo_block_text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+  height: 100%;
+  margin-left: 15px;
+
+  span {
+    font-size: 2.4rem;
+    line-height: 2.4rem;
+    color: $color-malibu;
+  }
+}
+
+.logo_block_contacts {
+  display: flex;
+  justify-content: flex-end;
+  gap: 25px;
+}
+
+.logo_block_contacts_address,
+.logo_block_contacts_link {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+
+  span {
+    font-size: 1.8rem;
+    line-height: auto;
+    color: $color-malibu;
+  }
+}

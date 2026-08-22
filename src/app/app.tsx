@@ -4,6 +4,7 @@ import { RouterProvider } from "react-router-dom";
 import {AppRoutes} from "./routes/routes";
 import Layout from "../pages/layout/layout";
 import { ScrollTop } from "src/shared/scroll-top";
+import "src/styles/global.scss";
 
 const App = (): React.ReactNode => {
   const router = createBrowserRouter([

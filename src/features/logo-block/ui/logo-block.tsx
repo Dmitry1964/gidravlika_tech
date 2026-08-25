@@ -21,7 +21,7 @@ const LogoBlock = () => {
               height={30}
               alt="Logo Name"
             />
-            <span>Ремонт и сервис<br className={cls.logo_block_break}/>гидравлических систем</span>
+            <span>Ремонт и сервис<br className={cls.logo_block_break}/> гидравлических систем</span>
           </div>
           <div className={cls.logo_block_contacts}>
             <div className={cls.logo_block_contacts_address}>

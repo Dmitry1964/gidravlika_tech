@@ -9,7 +9,7 @@
 
 .logo_block_img img {
   @include vp-767 {
-    width: clamp(40px, 7vw, 65px);
+    width: clamp(50px, 7vw, 65px);
   }
 }
 
@@ -27,7 +27,7 @@
     color: $color-malibu;
 
     @include vp-767 {
-      font-size: 12px;
+      font-size: 14px;
     }
   }
 
@@ -84,7 +84,7 @@
     display: block;
   }
 
-  @include vp-567 {
-    display: none;
-  }
+  // @include vp-567 {
+  //   display: none;
+  // }
 }

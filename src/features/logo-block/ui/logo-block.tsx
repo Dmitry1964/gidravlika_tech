@@ -1,7 +1,12 @@
 import { ButtonMenu } from 'src/shared/button-menu';
 import cls from './logo-block.module.scss';
+import { ContactsData, MOBILE_VIEWPORT } from 'src/shared/lib/constans';
+import { useScreenWidth } from 'src/shared/lib/hoos';
 
 const LogoBlock = () => {
+
+  const screenWidth = useScreenWidth();
+  
   return (
     <div className={cls.logo_block}>
       <div className="container">
@@ -40,10 +45,12 @@ const LogoBlock = () => {
                 height={40}
                 alt="Phone Icon"
               />
-              <span>8 960-872-66-22</span>
+              <span>{ContactsData.RepairPhone}</span>
             </a>
           </div>
-          <ButtonMenu/>
+          {screenWidth < MOBILE_VIEWPORT &&
+            <ButtonMenu />
+          }
         </div>
       </div>
     </div>

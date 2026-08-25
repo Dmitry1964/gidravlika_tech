@@ -1,0 +1,10 @@
+@use 'src/styles/variables.scss' as *;
+@use 'src/styles/mixins.scss' as *;
+
+.header_banner img {
+
+    @include vp-1023 {
+        height: 450px;
+        object-fit: cover;
+    }    
+}

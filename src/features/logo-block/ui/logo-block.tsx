@@ -1,3 +1,4 @@
+import { ButtonMenu } from 'src/shared/button-menu';
 import cls from './logo-block.module.scss';
 
 const LogoBlock = () => {
@@ -20,7 +21,7 @@ const LogoBlock = () => {
               height={30}
               alt="Logo Name"
             />
-            <span>Ремонт и сервис гидравлических систем</span>
+            <span>Ремонт и сервис<br className={cls.logo_block_break}/>гидравлических систем</span>
           </div>
           <div className={cls.logo_block_contacts}>
             <div className={cls.logo_block_contacts_address}>
@@ -30,7 +31,7 @@ const LogoBlock = () => {
                 height={40}
                 alt="Point Icon"
               />
-              <span>г.Волгоград, ул.им.Лавренёва,19Д</span>
+              <span>г.Волгоград,<br className={cls.logo_block_break}/>ул.им.Лавренёва,19Д</span>
             </div>
             <a className={cls.logo_block_contacts_link} href="tel:+79608726622">
               <img
@@ -42,6 +43,7 @@ const LogoBlock = () => {
               <span>8 960-872-66-22</span>
             </a>
           </div>
+          <ButtonMenu/>
         </div>
       </div>
     </div>

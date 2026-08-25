@@ -1,24 +1,44 @@
 @use 'src/styles/variables.scss' as *;
+@use 'src/styles/mixins.scss' as *;
 
 .logo_block_wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 75px;
+}
+
+.logo_block_img img {
+  @include vp-767 {
+    width: clamp(40px, 7vw, 65px);
+  }
 }
 
 .logo_block_text {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   flex: 1;
   height: 100%;
   margin-left: 15px;
 
   span {
-    font-size: 2.4rem;
-    line-height: 2.4rem;
+    font-size: clamp(1.6rem, 2vw, 2.4rem);
+    line-height: auto;
     color: $color-malibu;
+
+    @include vp-767 {
+      font-size: 12px;
+    }
+  }
+
+  img {
+    @include vp-1023 {
+      width: 120px;
+    }
+
+    @include vp-767 {
+      width: 80px;
+    }
   }
 }
 
@@ -35,9 +55,36 @@
   align-items: center;
   gap: 10px;
 
+  @include vp-567 {
+    display: none;
+  }
+
   span {
-    font-size: 1.8rem;
-    line-height: auto;
     color: $color-malibu;
+    font-size: clamp(1.4rem, 1.5vw, 1.8rem);
+    line-height: auto;
+
+    @include vp-767 {
+      font-size: 1.2rem;
+    }
+  }
+
+  img {
+    @include vp-1023 {
+      width: 30px;
+      height: 30px;
+    }
+  }
+}
+
+.logo_block_break {
+  display: none;
+
+  @include vp-1023 {
+    display: block;
+  }
+
+  @include vp-567 {
+    display: none;
   }
 }

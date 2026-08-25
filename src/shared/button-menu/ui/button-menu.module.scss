@@ -1,0 +1,29 @@
+@use 'src/styles/variables.scss' as *;
+
+.button_menu {
+    width: 25px;
+    height: 25px;
+    background: transparent;
+    border: 1px solid $color-malibu;
+    border-radius: 5px;
+    position: relative;
+}
+
+.button_menu::after,
+.button_menu::before {
+content: '';
+position: absolute;
+width: 14px;
+height: 1px;
+background-color: $color-malibu;
+// border-radius: 1px;
+left: calc(50% - 7px);
+}
+
+.button_menu::before {
+    top: 7px;
+}
+
+.button_menu::after {
+    bottom: 7px;
+}

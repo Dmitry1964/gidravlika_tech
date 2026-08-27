@@ -1,6 +1,10 @@
 @use 'src/styles/variables.scss' as *;
 @use 'src/styles/mixins.scss' as *;
 
+.logo_block {
+  margin-bottom: 20px;
+}
+
 .logo_block_wrapper {
   display: flex;
   justify-content: space-between;

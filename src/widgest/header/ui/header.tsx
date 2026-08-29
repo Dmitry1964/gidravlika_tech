@@ -2,7 +2,10 @@ import { LogoBlock } from 'src/features/logo-block';
 import cls from './header.module.scss';
 import { Navbar } from 'src/features/navbar';
 import { useScreenWidth } from 'src/shared/lib/hoos';
-import { MOBILE_VIEWPORT } from 'src/shared/lib/constans';
+import {
+  MOBILE_VIEWPORT,
+  MOBILE_VIEWPORT_SMALL,
+} from 'src/shared/lib/constans';
 
 const Header = () => {
   const screenWidth = useScreenWidth();
@@ -15,25 +18,43 @@ const Header = () => {
       </div>
       <div className={cls.header_title}>
         <h2 className={cls.header_title_slogan}>
-          ЭФФЕКТИВНЫЙ РЕМОНТ - НАШ ПРИОРИТЕТ
+          ЭФФЕКТИВНЫЙ РЕМОНТ <span>-</span> НАШ ПРИОРИТЕТ
         </h2>
         <h2 className={cls.header_title_text}>
           РЕМОНТ ГИДРАВЛИЧЕСКОГО ОБОРУДОВАНИЯ СПЕЦТЕХНИКИ
         </h2>
       </div>
       <div className={cls.header_banner}>
-        <picture>
-          <source
-            srcSet="/images/banner/banner-desktop.webp"
-            type="image/webp"
-          />
-          <img
-            src="/images/banner/banner-desktop.jpg"
-            width="100%"
-            height="100%"
-            alt="Header Banner"
-          />
-        </picture>
+        {screenWidth > MOBILE_VIEWPORT_SMALL && (
+          <picture>
+            <source
+              srcSet="/images/banner/banner-desktop.webp"
+              type="image/webp"
+            />
+            <img
+              src="/images/banner/banner-desktop.jpg"
+              width="100%"
+              height="100%"
+              alt="Header Banner"
+            />
+          </picture>
+        )}
+
+                {screenWidth <= MOBILE_VIEWPORT_SMALL && (
+          <picture>
+            <source
+              srcSet="/images/banner/banner-mobile.webp"
+              type="image/webp"
+            />
+            <img
+              src="/images/banner/banner-mobile.jpg"
+              width="100%"
+              height="100%"
+              alt="Header Banner"
+            />
+          </picture>
+        )}
+
       </div>
     </header>
   );

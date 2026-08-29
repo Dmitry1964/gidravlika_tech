@@ -1,6 +1,7 @@
 export const TABLET_VIEWPORT = 768;
 export const DESKTOP_VIEWPORT = 1024;
 export const MOBILE_VIEWPORT = 568;
+export const MOBILE_VIEWPORT_SMALL = 375;
 
 export enum ContactsData {
   RepairPhone = '+79608726622',

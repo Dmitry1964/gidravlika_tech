@@ -36,7 +36,11 @@
   grid-row-end: 3;
   z-index: 10;
 
-  margin-top: 60px       ;
+  margin-top: 60px;
+
+  @include vp-767 {
+    margin-top: 50px;
+  }
 }
 
 .header_title_slogan {
@@ -45,12 +49,37 @@
   line-height: auto;
   color: $color-malibu;
   margin: 0 0 40px 0;
-  padding: 0;
+  padding: 0 10px;
+  text-align: center;
+
+  @include vp-1279 {
+    font-size: clamp(3.2rem, 4vw, 5rem);
+  }
+
+  @include vp-767 {
+    font-size: clamp(2.6rem, 4vw, 3.2rem);
+    margin: 0 0 50px 0;
+  }
+
+  span {
+    @include vp-374 {
+      display: none;
+    }
+  }
 }
 
 .header_title_text {
   font-size: 4rem;
   color: $color-default-white;
   margin: 0;
-  padding: 0;
+  padding: 0 10px;
+  text-align: center;
+
+  @include vp-1279 {
+    font-size: clamp(2.5rem, 3vw, 4rem);
+  }
+
+  @include vp-767 {
+    font-size: clamp(2rem, 4vw, 2.5rem);
+  }
 }

@@ -2,11 +2,16 @@ import { ButtonMenu } from 'src/shared/button-menu';
 import cls from './logo-block.module.scss';
 import { ContactsData, MOBILE_VIEWPORT } from 'src/shared/lib/constans';
 import { useScreenWidth } from 'src/shared/lib/hoos';
+import { useState } from 'react';
 
 const LogoBlock = () => {
 
   const screenWidth = useScreenWidth();
-  
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const handleClick = () => {
+    setIsMenuOpen(!isMenuOpen);
+  }
+
   return (
     <div className={cls.logo_block}>
       <div className="container">
@@ -49,7 +54,7 @@ const LogoBlock = () => {
             </a>
           </div>
           {screenWidth < MOBILE_VIEWPORT &&
-            <ButtonMenu />
+            <ButtonMenu isOpen={isMenuOpen} onClick={handleClick} />
           }
         </div>
       </div>

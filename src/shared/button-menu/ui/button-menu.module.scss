@@ -7,6 +7,7 @@
     border: 1px solid $color-malibu;
     border-radius: 5px;
     position: relative;
+    cursor: pointer;
 }
 
 .button_menu::after,
@@ -18,12 +19,18 @@ height: 1px;
 background-color: $color-malibu;
 // border-radius: 1px;
 left: calc(50% - 7px);
+transition: transform 0.5s ease-in-out;
 }
 
 .button_menu::before {
-    top: 8px;
+  transform: translateY(8px) rotate(0);
+    top: 0;
 }
 
 .button_menu::after {
-    bottom: 8px;
+    bottom: 0;
+    transform: translateY(-8px);
+    transform-origin: center;
+
 }
+

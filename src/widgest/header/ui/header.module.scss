@@ -37,6 +37,9 @@
   z-index: 10;
 
   margin-top: 60px;
+  transform: translateY(30px);
+  opacity: 0;
+  animation: headerTitleMove 0.8s ease forwards;
 
   @include vp-767 {
     margin-top: 50px;
@@ -81,5 +84,12 @@
 
   @include vp-767 {
     font-size: clamp(2rem, 4vw, 2.5rem);
+  }
+}
+
+@keyframes headerTitleMove {
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
